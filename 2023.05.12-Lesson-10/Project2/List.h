@@ -63,5 +63,7 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& stream, const List& list);
 
+	friend void shift(List& list, int ind);
+
 };
 

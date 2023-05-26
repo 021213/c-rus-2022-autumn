@@ -1,6 +1,25 @@
 #include<iostream>
 #include"List.h"
 
+void shift(List& list, int ind)
+{
+	if (!list.Index_Valid(ind)) return;
+
+	Node* firstPartEnd = list.head;
+	while (ind > 1)
+	{
+		firstPartEnd = firstPartEnd->next;
+		ind--;
+	}
+
+	Node* secondPartStart = firstPartEnd->next;
+	firstPartEnd->next = nullptr;
+	Node* firstPartStart = list.head;
+	list.head = secondPartStart;
+
+	//....magic
+
+}
 
 int main(int argc, char* argv[])
 {
